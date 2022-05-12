@@ -1,4 +1,4 @@
-- 자바의 메모리 영역 구조는?
+- 자바 메모리 영역의 구조는?
   - 메서드 : static/전역 변수, 클래스 정보
   - 스택   : 지역 변수, 메서드
   - 힙     : 동적으로 할당된 객체가 저장되고, 가비지 컬렉션에 의해 관리됨
@@ -26,3 +26,13 @@
   - String        : 불변 | read 시 빠른 성능 | thread-safe
   - StringBuffer  : 가변 | 단일쓰레드에서 write시 빠른 성능 | thread-safe
   - StringBuilder : 가변 | 다중쓰레드에서 write시에 사용 | not thread-safe
+
+- AOP란?
+  - OOP만을 따라서는 제거할 수 없는 중복 코드를 해결하기 위함
+  - 여러 클래스에 걸쳐 중복된 코드(관심사)를 비즈니스 로직에서 분리하여 재사용
+
+- Spring MVC 동작 구조
+  1. 사용자의 요청을 **DispatcherServlet**이 수신하여 HandlerMapping에 위임
+  2. **HandlerMapping**이 적합한 Controller를 탐색
+  3. **Controller**에서 Service, DAO, Repository 등을 통해 요청을 처리하여 반환
+  4. **ViewResolver**에서 view를 반환
